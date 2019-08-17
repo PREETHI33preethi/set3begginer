@@ -2,31 +2,31 @@
 #define max 10
 int a[11] = { 10, 14, 19, 26, 27, 31, 33, 35, 42, 44, 0 };
 int b[10];
-void merging(int low, int mid, int high)
+void merging(int lw, int md, int hg)
  {
    int l1, l2, i;
-   for(l1 = low, l2 = mid + 1, i = low; l1 <= mid && l2 <= high; i++) {
+   for(l1 = lw, l2 = md + 1, i = lw; l1 <= md && l2 <= hg; i++) {
       if(a[l1] <= a[l2])
          b[i] = a[l1++];
       else
          b[i] = a[l2++];
    }
-   while(l1 <= mid)    
+   while(l1 <= md)    
       b[i++] = a[l1++];
-   while(l2 <= high)   
+   while(l2 <= hg)   
       b[i++] = a[l2++];
-   for(i = low; i <= high; i++)
+   for(i = lw; i <= hg; i++)
       a[i] = b[i];
 }
-void sort(int low, int high) 
+void sort(int lw, int hg) 
 {
-   int mid;
-   if(low < high) 
+   int md;
+   if(lw < hg) 
    {
-      mid = (low + high) / 2;
-      sort(low, mid);
-      sort(mid+1, high);
-      merging(low, mid, high);
+      mid = (lw + hg) / 2;
+      sort(lw, md);
+      sort(md+1, hg);
+      merging(lw, md, hg);
    } 
    else 
    { 
