@@ -23,7 +23,7 @@ void sort(int lw, int hg)
    int md;
    if(lw < hg) 
    {
-      mid = (lw + hg) / 2;
+      md = (lw + hg) / 2;
       sort(lw, md);
       sort(md+1, hg);
       merging(lw, md, hg);
