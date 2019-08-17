@@ -4,7 +4,7 @@ void main()
 {
 int i,min,N,number[50];
 clrscr();
-scanf("%d",&n);
+scanf("%d",&N);
 for(i=0;i<N;i++)
 {
 scanf("%d",&number[i]);
