@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[10],temp,N,i,j;
+clrscr();
+scanf("%d",&N);
+for(i=0;i<N;i++)
+{
+scanf("%d",&a[i]);
+}
+for(i=0;i<N;i++)
+{
+for(j=i+1;j<N;j++)
+{
+if(a[i]>a[j])
+{
+temp=a[i];
+a[i]=a[j];
+a[j]=temp;
+}
+}
+}
+if(N%2==0)
+{
+N=N/2;
+printf("\n%d",a[N-1]);
+}
+else
+{
+N=N/2;
+printf("\n%d",a[N]);
+}
+getch();
+}
